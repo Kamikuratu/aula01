@@ -32,9 +32,44 @@
 
 #Dada a lista ["maçã", "banana", "cereja"] e o dicionário {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}, calcule o preço total da lista de compras.
 
-lista = ["maçã", "banana", "cereja"]
-precos = {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}
+#lista = ["maçã", "banana", "cereja"]
+#precos = {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}
+#total = sum(precos[item] for item in lista)
+#print(total)
 
-total = sum(precos[item] for item in lista )
+#Objetivo: Dada uma lista de emails, remover todos os duplicados.
 
-print(total)
+#emails: list = ["user@example.com", "admin@example.com", "user@example.com", "manager@example.com"]
+#emails_unicos: list = []
+
+# Resolução 1 - Minha tentativa
+#for i in emails:
+#    if i not in emails_unicos:
+#        emails_unicos.append(i)
+
+#print(emails_unicos)
+
+# Resolução 2 - Usando a função set
+
+#emails: list = ["user@example.com", "admin@example.com", "user@example.com", "manager@example.com"]
+#emails_unicos: list = set(emails)
+#print(emails_unicos)
+
+#Objetivo: Dada uma lista de idades, filtrar apenas aquelas que são maiores ou iguais a 18.
+
+# Resolução 1 - Minha tentativa (loop for explícito)
+
+idades = [22, 15, 30, 17, 18]
+maiores = []
+
+for i in idades:
+    if i >= 18:
+        maiores.append(i)
+
+print(maiores)
+
+# Resolução 2 - Gabarito (loop for discreto)
+
+idades = [22, 15, 30, 17, 18]
+maiores = [idade for idade in idades if idade >= 18]
+print(maiores)
